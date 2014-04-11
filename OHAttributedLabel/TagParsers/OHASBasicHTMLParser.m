@@ -122,6 +122,13 @@
                 }
             }, @"<a href=(['\"])(.+?)\\1>(.+?)</a>",
             
+            ^NSAttributedString*(NSAttributedString* str, NSTextCheckingResult* match)
+            {
+                NSMutableAttributedString* foundString = [[NSMutableAttributedString alloc] initWithString:@"\n"];
+                return foundString;
+                
+            }, @"<br />",
+            
             nil];
 }
 
